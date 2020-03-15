@@ -419,3 +419,4 @@ nnoremap <f8> :delete<cr>
 " ---custom
 only
 windo set relativenumber
+nnoremap x :file<cr>
