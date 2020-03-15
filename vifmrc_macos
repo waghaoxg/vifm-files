@@ -4,7 +4,6 @@
 " The " character at the beginning of a line comments out the line.
 " Blank lines are ignored.
 " The basic format for each item is shown with an example.
-
 " ------------------------------------------------------------------------------
 
 " Command used to edit files in various contexts.  The default is vim.
@@ -114,7 +113,6 @@ set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
 
 " :mark mark /full/directory/path [filename]
 
-mark b ~/bin/
 mark h ~/
 
 " ------------------------------------------------------------------------------

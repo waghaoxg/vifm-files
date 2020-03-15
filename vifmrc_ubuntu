@@ -4,7 +4,6 @@
 " The " character at the beginning of a line comments out the line.
 " Blank lines are ignored.
 " The basic format for each item is shown with an example.
-only
 " ------------------------------------------------------------------------------
 
 " This is the actual command used to start vi.  The default is vim.
@@ -78,6 +77,15 @@ set timefmt=%m/%d\ %H:%M
 " Show list of matches on tab complition in command-line mode
 
 set wildmenu
+
+" Display completions in a form of popup with descriptions of the matches
+
+set wildstyle=popup
+
+" Display suggestions in normal, visual and view modes for keys, marks and
+" registers (at most 5 files).  In other view, when available.
+
+set suggestoptions=normal,visual,view,otherpane,keys,marks,registers
 
 " Ignore case in search patterns unless it contains at least one uppercase
 " letter
@@ -425,3 +433,15 @@ nnoremap <f8> :delete<cr>
 " Block particular shortcut
 "
 " nnoremap <left> <nop>
+
+" Export IPC name of current instance as environment variable and use it to
+" communicate with the instance later.
+"
+" It can be used in some shell script that gets run from inside vifm, for
+" example, like this:
+"     vifm --server-name "$VIFM_SERVER_NAME" --remote +"cd '$PWD'"
+"
+" let $VIFM_SERVER_NAME = v:servername
+" ---custom
+only
+windo set relativenumber
