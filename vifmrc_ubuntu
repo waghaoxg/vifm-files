@@ -446,3 +446,4 @@ nnoremap <f8> :delete<cr>
 only
 windo set relativenumber
 nnoremap x :file<cr>
+nnoremap ,k :history<cr>
