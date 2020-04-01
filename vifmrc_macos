@@ -287,7 +287,7 @@ fileviewer *.docx docx2txt.pl %f -
 
 filetype *
        \ {open with macvim}
-       \ /Applications/MacVim.app/Contents/bin/mvim --remote-tab %d/%f &,
+       \ /Applications/MacVim.app/Contents/bin/mvim --remote %d/%f &,
 
 " Syntax highlighting in preview
 "
@@ -350,7 +350,7 @@ nnoremap w :view<cr>
 vnoremap w :view<cr>gv
 
 " Open file in new MacVim tab
-nnoremap o :!/Applications/MacVim.app/Contents/bin/mvim --remote-tab-silent %f<cr>
+nnoremap o :!/Applications/MacVim.app/Contents/bin/mvim --remote-silent %f<cr>
 " Open file in new MacVim window
 nnoremap O :!/Applications/MacVim.app/Contents/bin/mvim %f<cr>
 
@@ -417,7 +417,6 @@ nnoremap <f8> :delete<cr>
 "
 " let $VIFM_SERVER_NAME = v:servername
 " ---custom
-only
 windo set relativenumber
 nnoremap x :file<cr>
 nnoremap ,k :history<cr>
